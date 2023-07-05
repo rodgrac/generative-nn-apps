@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 from utils import constants
 
 
-def visualize_batch(batch_data, norm='imgnet'):
+def visualize_batch(batch_data, norm=None):
     data_grid = torchvision.utils.make_grid(batch_data)
     data_np = data_grid.numpy().transpose((1, 2, 0))
     if norm == 'imgnet':
